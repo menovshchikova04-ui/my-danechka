@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>С днём рождения! 🎂</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;
+font-family:Georgia,serif;color:#fff;text-align:center;
+background:radial-gradient(circle at 15% 20%,#ffd166 0 8px,transparent 9px),
+radial-gradient(circle at 85% 25%,#ff8fab 0 9px,transparent 10px),
+linear-gradient(135deg,#542080,#c43d70 55%,#f2a35b)}
+body:before{content:"";position:fixed;inset:-50%;
+background:repeating-conic-gradient(from 5deg,transparent 0 8deg,#ffffff18 8deg 10deg);
+animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.card{position:relative;width:min(900px,90vw);padding:45px 28px;
+border:2px solid #ffffff88;border-radius:30px;background:#30104c77;
+backdrop-filter:blur(10px);box-shadow:0 25px 70px #0005}
+.cake{font-size:48px}
+h1{font-size:clamp(38px,8vw,76px);line-height:1.06;margin:20px 0 35px}
+button{padding:16px 30px;border:0;border-radius:999px;background:#ffd166;
+color:#65245c;font-size:20px;font-weight:bold;cursor:pointer;box-shadow:0 8px 20px #0004}
+button:active{transform:scale(.97)}
+#hint{display:none;font-size:clamp(24px,5vw,40px);line-height:1.25;margin:30px auto 0;max-width:760px}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="cake">🎂 ✨ 🎈</div>
+<h1>То, что ты ищешь, не отражается.</h1>
+<button onclick="document.getElementById('hint').style.display='block';this.style.display='none'">ещё подсказку</button>
+<div id="hint">Ты привык видеть то, что находится перед ним. Но сегодня тебе нужно посмотреть за него.</div>
+</main>
+</body>
+</html>
